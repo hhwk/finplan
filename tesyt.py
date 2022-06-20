@@ -361,18 +361,18 @@ elif menu == 'Прогноз':
                 tpd+=1
             if tpd<0:
                 tpd=0
-            st.metric('ДТП1',tpd)
+            st.metric('ДТП',tpd)
         if st.button('Расчет'):
-            st.balloons()
-            tpd_count(tpd)
-            placeholder.info('Данные обновлены!')
-            time.sleep(3)
+            with st.spinner('Wait for it...'):
+                time.sleep(5)
+                tpd_count(tpd)
+            st.success('Данные обновлены!')
     if choose == 'На 10 дней вперед':
         with open('data_pogoda_10days', encoding='utf8') as f:
             templates_10 = json.load(f)
 
         option11 = st.selectbox(
-            'Направление ветра',
+            'Район',
             ('Север', 'Запад', 'Юг',  'Восток'))
 
         placeholder = st.empty()
@@ -461,10 +461,10 @@ elif menu == 'Прогноз':
             col9.metric("", "🌤", "")
             col10.metric("", "🌤", "")
         if st.button('Обновить данные'):
-            os.system('python parser.py')
-            st.balloons()
-            placeholder.info('Данные обновлены!')
-            time.sleep(3)
+            with st.spinner('Wait for it...'):
+                time.sleep(5)
+                os.system('python parser.py')
+            st.success('Данные обновлены!')
 
     if choose == 'Сегодня':
         with open('data_pogoda', encoding='utf8') as f:
@@ -557,7 +557,7 @@ elif menu == 'Прогноз':
             col7.metric("", "🌤", "")
             col8.metric("", "🌤", "")
         if st.button('Обновить данные'):
-            os.system('python parser.py')
-            st.balloons()
-            placeholder.info('Данные обновлены!')
-            time.sleep(3)
+            with st.spinner('Wait for it...'):
+                time.sleep(5)
+                os.system('python parser.py')
+            st.success('Данные обновлены!')
