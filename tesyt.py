@@ -53,19 +53,19 @@ X2=[]
 for count in range (0,6):
     if Y[count]==1:
         if Y2[count]+3>6:
-            Y2[count]=Y2[count]-random.radint(0,3)
+            Y2[count]=Y2[count]- randint(0,3)
             X.append(Y2[count])
         else:
-            Y2[count]=Y2[count]+random.randint(0,3)
+            Y2[count]=Y2[count]+ randint(0,3)
             X.append(Y2[count])
     else:
         X.append(0)
     if Y[count]==1:
         if Y2[count]+3>6:
-            Y2[count]=Y2[count]-random.radint(0,3)
+            Y2[count]=Y2[count]- randint(0,3)
             X2.append(Y2[count])
         else:
-            Y2[count]=Y2[count]+random.randint(0,3)
+            Y2[count]=Y2[count]+ randint(0,3)
             X2.append(Y2[count])
     else:
         X2.append(0)
