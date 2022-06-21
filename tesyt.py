@@ -380,7 +380,7 @@ elif menu == 'Прогноз':
             st.metric('ДТП',tpd)
         if st.button('Расчет'):
             with st.spinner('Wait for it...'):
-                time.sleep(5)
+                time.sleep(2)
                 tpd_count(tpd)
             st.success('Данные обновлены!')
     if choose == 'На 10 дней вперед':
@@ -478,7 +478,7 @@ elif menu == 'Прогноз':
             col10.metric("", "🌤", "")
         if st.button('Обновить данные'):
             with st.spinner('Wait for it...'):
-                time.sleep(5)
+                time.sleep(3)
                 os.system('python parser.py')
             st.success('Данные обновлены!')
 
@@ -579,6 +579,6 @@ elif menu == 'Прогноз':
             col8.metric("", "🌤", "")
         if st.button('Обновить данные'):
             with st.spinner('Wait for it...'):
-                time.sleep(5)
+                time.sleep(3)
                 os.system('python parser.py')
             st.success('Данные обновлены!')
