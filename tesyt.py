@@ -374,7 +374,10 @@ elif menu == 'Прогноз':
             elif age3>49 and age3<81:
                 tpd-=1
             elif age3>80:
-                tpd+=1
+                if age3>90:    
+                    tpd+=2
+                else:
+                    tpd+=1
             if tpd<0:
                 tpd=0
             st.metric('ДТП',tpd)
