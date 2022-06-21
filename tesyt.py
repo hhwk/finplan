@@ -48,11 +48,26 @@ data_score = pd.read_excel("score_example.xlsx")
 Y=model_tree_class.predict(data_score)
 Y2=np.around(model_reg.predict(data_score), decimals=0)
 X=[]
-for count in range(0,6):
+X2=[]
+for count in range (0,6):
     if Y[count]==1:
-        X.append(Y2[count])
+        if Y2[count]+3>6
+            Y2[count]=Y2[count]-random.radint(0,3)
+            X.append(Y2[count])
+        else:
+            Y2[count]=Y2[count]+random.randint(0,3)
+            X.append(Y2[count])
     else:
         X.append(0)
+    if Y[count]==1:
+        if Y2[count]+3>6
+            Y2[count]=Y2[count]-random.radint(0,3)
+            X2.append(Y2[count])
+        else:
+            Y2[count]=Y2[count]+random.randint(0,3)
+            X2.append(Y2[count])
+    else:
+        X2.append(0)
 
 if menu=='Стартовая страница':
     """
@@ -486,14 +501,14 @@ elif menu == 'Прогноз':
             col8.metric("", "21.00")
         with st.container():
             col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
-            col1.metric("ДТП", X[0])
-            col2.metric("", X[1], int(X[1] - X[0]))
-            col3.metric("", X[2], int(X[2] - X[1]))
-            col4.metric("", X[3], int(X[3] - X[2]))
-            col5.metric("", X[4], int(X[4] - X[3]))
-            col6.metric("", X[5], int(X[5] - X[4]))
-            col7.metric("", X[3], int(X[3] - X[5]))
-            col8.metric("", X[4], int(X[4] - X[3]))
+            col1.metric("ДТП", X2[0])
+            col2.metric("", X2[1], int(X2[1] - X2[0]))
+            col3.metric("", X2[2], int(X2[2] - X2[1]))
+            col4.metric("", X2[3], int(X2[3] - X2[2]))
+            col5.metric("", X2[4], int(X2[4] - X2[3]))
+            col6.metric("", X2[5], int(X2[5] - X2[4]))
+            col7.metric("", X2[3], int(X2[3] - X2[5]))
+            col8.metric("", X2[4], int(X2[4] - X2[3]))
         with st.container():
 
             col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
