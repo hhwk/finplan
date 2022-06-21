@@ -488,6 +488,11 @@ elif menu == 'Прогноз':
 
         placeholder = st.empty()
         st.metric('Сегодня',today.strftime("%d/%m/%y"))
+         
+        
+        option111 = st.selectbox(
+            'Район',
+            ('Север', 'Запад', 'Юг',  'Восток'))
 
         with st.container():
 
