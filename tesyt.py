@@ -4,6 +4,7 @@ from datetime import date, timedelta
 import time
 import streamlit.components.v1 as components
 import json
+from random import randint
 import os
 import joblib
 import pandas as pd
