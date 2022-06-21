@@ -51,7 +51,7 @@ X=[]
 X2=[]
 for count in range (0,6):
     if Y[count]==1:
-        if Y2[count]+3>6
+        if Y2[count]+3>6:
             Y2[count]=Y2[count]-random.radint(0,3)
             X.append(Y2[count])
         else:
@@ -60,7 +60,7 @@ for count in range (0,6):
     else:
         X.append(0)
     if Y[count]==1:
-        if Y2[count]+3>6
+        if Y2[count]+3>6:
             Y2[count]=Y2[count]-random.radint(0,3)
             X2.append(Y2[count])
         else:
