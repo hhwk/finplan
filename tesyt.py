@@ -51,8 +51,8 @@ today_p9=date.today() + timedelta(days=9)
 Y=[]
 Y2=[]
 for i in range(0,100):
-         Y.append(rendit(0,100))
-         Y2.append(rendit(0,100))
+         Y.append(randint(0,100))
+         Y2.append(randint(0,100))
 X=[]
 X2=[]
 for count in range (0,6):
