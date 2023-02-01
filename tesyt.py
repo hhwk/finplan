@@ -48,6 +48,8 @@ today_p9=date.today() + timedelta(days=9)
 #data_score[['month','temperature','atmospheric_pressure','humidity','Wind_speed','wind_В','region_Северо-запад', 'hour','snow','rain']]
 #Y=model_tree_class.predict(data_score)
 #Y2=np.around(model_reg.predict(data_score), decimals=0)
+Y=[]
+Y2=[]
 for i in range(0,100):
          Y.append(randomrendit(0,100))
          Y2.append
