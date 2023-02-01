@@ -9,7 +9,6 @@ import os
 import joblib
 import pandas as pd
 import numpy as np
-import sklearn
 
 
 
@@ -43,33 +42,33 @@ today_p8=date.today() + timedelta(days=8)
 today_p9=date.today() + timedelta(days=9)
 
 #Модель
-model_tree_class=joblib.load(r'classification_model.pkl')
-model_reg=joblib.load(r'reg_model.pkl')
-data_score = pd.read_excel("score_example.xlsx")
+#model_tree_class=joblib.load(r'classification_model.pkl')
+#model_reg=joblib.load(r'reg_model.pkl')
+#data_score = pd.read_excel("score_example.xlsx")
 #data_score[['month','temperature','atmospheric_pressure','humidity','Wind_speed','wind_В','region_Северо-запад', 'hour','snow','rain']]
-Y=model_tree_class.predict(data_score)
-Y2=np.around(model_reg.predict(data_score), decimals=0)
-X=[]
-X2=[]
-for count in range (0,6):
-    if Y[count]==1:
-        if Y2[count]+3>6:
-            Y2[count]=Y2[count]- randint(0,3)
-            X.append(Y2[count])
-        else:
-            Y2[count]=Y2[count]+ randint(0,3)
-            X.append(Y2[count])
-    else:
-        X.append(0)
-    if Y[count]==1:
-        if Y2[count]+3>6:
-            Y2[count]=Y2[count]- randint(0,3)
-            X2.append(Y2[count])
-        else:
-            Y2[count]=Y2[count]+ randint(0,3)
-            X2.append(Y2[count])
-    else:
-        X2.append(0)
+#Y=model_tree_class.predict(data_score)
+#Y2=np.around(model_reg.predict(data_score), decimals=0)
+#X=[]
+#X2=[]
+#for count in range (0,6):
+#    if Y[count]==1:
+#        if Y2[count]+3>6:
+#            Y2[count]=Y2[count]- randint(0,3)
+#            X.append(Y2[count])
+#        else:
+#            Y2[count]=Y2[count]+ randint(0,3)
+#            X.append(Y2[count])
+#    else:
+#        X.append(0)
+#    if Y[count]==1:
+#        if Y2[count]+3>6:
+#            Y2[count]=Y2[count]- randint(0,3)
+#            X2.append(Y2[count])
+#        else:
+#            Y2[count]=Y2[count]+ randint(0,3)
+#            X2.append(Y2[count])
+#    else:
+#        X2.append(0)
 
 if menu=='Стартовая страница':
     """
